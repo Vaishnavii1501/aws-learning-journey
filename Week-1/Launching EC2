@@ -1,0 +1,17 @@
+# AWS Week 1 - Day 1: Launching EC2 Instance
+
+## Steps to Launch an EC2 Instance:
+1. Login to AWS Console
+2. Go to EC2 Dashboard > Launch Instance
+3. Choose Amazon Machine Image (AMI):
+   - Ubuntu Server 20.04 LTS (Free tier eligible)
+4. Select instance type:
+   - t2.micro (Free Tier)
+5. Configure storage (default is fine)
+6. Add tags (optional)
+7. Configure Security Group:
+   - Allow SSH (Port 22) from My IP
+8. Review and Launch
+9. Download the `.pem` key file securely
+
+> ✅ Instance is now running!
