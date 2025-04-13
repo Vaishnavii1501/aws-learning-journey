@@ -1,0 +1,38 @@
+🔐 Permissions & Ownership
+
+chmod 755 file       # Change permissions of file
+chmod +x file.sh     # Make a script executable
+chown user file      # Change owner of a file
+chgrp group file     # Change group ownership
+ls -l                # Shows permissions in detail
+
+
+🧑‍💻 User Management
+
+whoami             # Show current logged-in user
+adduser newuser    # Add a new user
+passwd newuser     # Set password for a user
+deluser username   # Delete a user
+su - username      # Switch to another user
+id                 # Show current user ID and group ID
+
+🔍 Searching & Filtering
+
+find . -name "file"         # Find a file in current and subdirectories
+grep "text" file.txt        # Search for text inside a file
+grep -r "text" /folder      # Recursively search in a directory
+locate filename             # Quickly locate file (needs updatedb)
+
+
+🧠 System Info & Monitoring
+
+uname -a             # Kernel version and system info
+top                  # Real-time process monitoring
+htop                 # Improved version of top (needs installation)
+df -h                # Disk usage of file systems
+du -sh folder/       # Disk usage of a folder
+free -m              # Memory usage
+uptime               # System uptime
+who                  # Who is logged in
+ps aux               # Show running processes
+kill PID             # Kill a process by PID
