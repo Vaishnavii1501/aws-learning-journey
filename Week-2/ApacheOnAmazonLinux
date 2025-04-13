@@ -1,0 +1,9 @@
+Apache on Amazon Linux
+sudo yum install httpd -y
+sudo service httpd start
+sudo service httpd status
+sudo service httpd reload
+sudo service httpd stop
+cd /var/www/html/ # Path to the HTML directory
+sudo nano /etc/httpd/conf/httpd.conf # Main Apache configuration file
+sudo nano /etc/httpd/conf.d/vhost.conf # Virtual host configuration file
