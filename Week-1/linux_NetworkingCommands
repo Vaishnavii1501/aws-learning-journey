@@ -1,0 +1,7 @@
+ifconfig             # Show IP and network interfaces
+ip a                 # Alternative to ifconfig
+ping google.com      # Test network connectivity
+netstat -tulnp       # Show open ports and services
+ss -tuln             # Modern alternative to netstat
+curl ifconfig.me     # Show your public IP
+hostname             # Show system hostname
