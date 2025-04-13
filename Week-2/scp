@@ -1,0 +1,28 @@
+🔐 Explored SCP (Secure Copy Protocol)
+
+Today, I learned how to transfer files securely between my local machine and EC2 instance using SCP.
+
+📦 What is SCP?
+SCP is a command-line tool used to copy files and directories securely over SSH.
+
+Useful for transferring code, configuration files, or any data between local and remote servers.
+
+📤 Uploading a file from local to EC2:
+
+scp -i your-key.pem filename.txt ubuntu@<EC2-PUBLIC-IP>:/home/ubuntu/
+📥 Downloading a file from EC2 to local:
+
+scp -i your-key.pem ubuntu@<EC2-PUBLIC-IP>:/home/ubuntu/filename.txt /path/to/local/
+📁 Recursive folder transfer (important!):
+To copy a whole folder, use the -r flag:
+
+
+scp -i your-key.pem -r myfolder ubuntu@<EC2-PUBLIC-IP>:/home/ubuntu/
+🔒 Tips:
+Always use correct path and permissions.
+
+Use chmod 400 your-key.pem before using SCP.
+
+The connection is secured using SSH encryption, ensuring safe transfer.
+
+SCP is now my go-to tool for moving files during EC2 setups! 🚀
