@@ -1,0 +1,22 @@
+🟠 Apache Web Server on Ubuntu EC2
+
+Today, I explored how to install, configure, and manage the Apache Web Server on an Ubuntu EC2 instance. This is essential for hosting static websites and learning how servers serve web content on the cloud.
+
+🔧 Steps to install and configure Apache on Ubuntu:
+Install Apache
+
+sudo apt-get update
+sudo apt-get install apache2 -y
+Control Apache service
+
+sudo service apache2 start      # Start the server
+sudo service apache2 status     # Check server status
+sudo service apache2 reload     # Reload configuration
+sudo service apache2 stop       # Stop the server
+Default HTML directory
+
+
+cd /var/www/html/
+Edit Apache config file
+
+sudo nano /etc/apache2/sites-available/000-default.conf
