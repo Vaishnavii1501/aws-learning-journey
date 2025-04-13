@@ -1,0 +1,68 @@
+AMIs & Snapshots
+
+---
+
+## 📦 What is an AMI?
+
+**Amazon Machine Image (AMI)** is a pre-configured template for launching EC2 instances.
+
+### 🔧 AMI Includes:
+- An operating system
+- Application server and applications
+- Optional configuration and permissions
+
+### 📌 Why use AMIs?
+- Launch identical EC2 instances quickly
+- Backup and replicate environments
+- Create custom templates for your deployments
+
+---
+
+## 🖼️ Creating an AMI
+
+1. Launch and configure an EC2 instance
+2. Go to EC2 → Instances → Select instance
+3. Click **Actions → Image and Templates → Create Image**
+4. Provide name & description
+5. AWS creates:
+   - The **AMI**
+   - One or more **Snapshots** of attached volumes
+
+---
+
+## 💾 What is a Snapshot?
+
+**Snapshot** is a backup of an EBS (Elastic Block Store) volume at a point in time.
+
+### ⚙️ Snapshot Use Cases:
+- Back up important data
+- Create new volumes from snapshots
+- Restore volumes after failure
+- Use in different availability zones
+
+---
+
+## 🔁 Relationship Between AMIs and Snapshots
+
+| AMI | Snapshot |
+|-----|----------|
+| Used to launch EC2 | Used to backup EBS volumes |
+| Can include multiple snapshots | A single volume backup |
+| Contains OS, config, and data | Contains only volume data |
+
+> 🔗 Every AMI has at least one snapshot (for the root EBS volume).
+
+---
+
+## 🔐 Notes on Encryption
+
+- Snapshots can be **encrypted** at creation or copied into encrypted versions.
+- Encrypted snapshots can only be restored into encrypted volumes.
+
+---
+
+## 🧩 Next Steps
+
+- [ ] Try creating custom AMI with Apache installed
+- [ ] Test launching new EC2 from that AMI
+- [ ] Explore snapshot scheduling using Amazon Data Lifecycle Manager
