@@ -1,0 +1,49 @@
+# 🌐 What is a Domain Name?
+
+A domain name is the human-readable address of a website (e.g., `example.com`). In AWS, managing domains typically involves:
+
+- Registering domain names
+- Managing DNS records
+- Integrating with services like Route 53
+
+---
+
+## 🛠️ AWS Services Involved
+
+### 1. **Amazon Route 53**
+> A scalable and highly available Domain Name System (DNS) web service.
+
+- Register domain names
+- Configure DNS records (A, CNAME, MX, etc.)
+- Enable routing policies (Latency-based, Failover, Geolocation, etc.)
+- Health checks and monitoring
+
+---
+
+## 🔗 Key Concepts
+
+| Term | Description |
+|------|-------------|
+| **DNS** | Domain Name System – translates domain names to IP addresses |
+| **A Record** | Maps a domain to an IPv4 address |
+| **CNAME Record** | Alias from one domain name to another |
+| **TTL** | Time to Live – how long DNS info is cached |
+| **Hosted Zone** | A container for DNS records in Route 53 |
+| **Registrar** | Entity used to register domain names (AWS can act as this) |
+
+---
+
+## 💡 Learning Summary
+
+- Learned to register a domain using Route 53
+- Configured DNS records for a sample domain
+- Tested routing and health checks
+- Explored how custom domain names can be used with CloudFront and S3 static websites
+
+---
+
+## 🧩 Next Steps
+
+- [ ] Experiment with domain registration and subdomains
+- [ ] Set up SSL certificates using AWS Certificate Manager
+- [ ] Integrate with CloudFront and S3
