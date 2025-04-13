@@ -1,0 +1,28 @@
+🖥️ Explored Ubuntu OS
+
+Today, I explored Ubuntu while working on my EC2 instance. Here are some key takeaways:
+
+🔍 What is Ubuntu?
+Ubuntu is a popular Linux distribution based on Debian.
+
+It's open-source, user-friendly, and widely used in cloud computing and servers.
+
+It comes with a rich set of pre-installed tools and packages, making it ideal for beginners and advanced users.
+
+💡 Why Ubuntu in AWS?
+Lightweight and efficient for cloud environments.
+
+Large community support and documentation.
+
+Frequent security updates and easy package management using apt.
+
+📌 Basic Ubuntu Commands Learned:
+
+pwd        # Print working directory
+ls         # List files and folders
+cd         # Change directory
+mkdir      # Create a new folder
+touch      # Create a new file
+sudo       # Execute command with superuser privileges
+apt update # Update package lists
+apt install <package_name> # Install new packages
