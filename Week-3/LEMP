@@ -1,0 +1,52 @@
+⚙️ LEMP Stack Setup on AWS EC2 (Amazon Linux 2)
+LEMP = Linux + NGINX + MariaDB + PHP
+
+📌 Step-by-Step Instructions
+1. Update your system
+sudo yum update -y
+🌐 2. Install NGINX
+sudo amazon-linux-extras enable nginx1
+sudo yum install nginx -y
+🚀 3. Start NGINX
+
+sudo systemctl start nginx
+sudo systemctl enable nginx
+💡 Open port 80 in your EC2 Security Group for HTTP
+
+🛠️ 4. Install MariaDB (MySQL)
+sudo yum install mariadb105-server -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+🔒 5. Secure MariaDB
+sudo mysql_secure_installation
+Set root password and remove anonymous users, test database, etc.
+
+🐘 6. Install PHP and PHP-FPM
+sudo amazon-linux-extras enable php8.2
+sudo yum clean metadata
+sudo yum install php php-mysqlnd php-fpm -y
+⚙️ 7. Configure PHP-FPM
+Edit the PHP-FPM config:
+sudo nano /etc/php-fpm.d/www.conf
+Change:
+user = apache  →  user = nginx  
+group = apache →  group = nginx
+🔄 8. Start PHP-FPM
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
+📁 9. Setup a PHP Test File
+sudo nano /usr/share/nginx/html/index.php
+Paste:
+<?php
+phpinfo();
+?>
+Remove default index.html if needed:
+sudo rm /usr/share/nginx/html/index.html
+🔁 10. Restart All Services
+sudo systemctl restart nginx
+sudo systemctl restart php-fpm
+sudo systemctl restart mariadb
+✅ Test in Browser
+Visit:
+http://<your-ec2-public-ip>/index.php
+You should see a PHP info page.
