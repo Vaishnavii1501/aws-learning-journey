@@ -1,10 +1,8 @@
 🔧 Steps to install and run Nginx:
 SSH into EC2 instance
-
 ssh -i password.pem ubuntu@<your-ec2-public-ip>
+
 Install Nginx
-
-
 sudo apt-get update
 sudo apt-get install nginx
 Control Nginx service
