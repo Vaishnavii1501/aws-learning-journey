@@ -1,0 +1,30 @@
+🟤 Nginx Web Server on Amazon Linux EC2
+
+Today, I learned how to set up and run the Nginx web server on Amazon Linux EC2. 🧑‍💻 This setup is crucial for hosting static or dynamic web pages directly on the cloud!
+
+🔧 Steps to install and configure Nginx on Amazon Linux:
+SSH into EC2 instance
+
+
+
+ssh -i password.pem ec2-user@<your-ec2-public-ip>
+Install Nginx
+
+
+sudo yum update -y
+sudo yum install nginx -y
+Start and control Nginx service
+
+
+sudo service nginx start      # Start the server
+sudo service nginx status     # Check server status
+sudo service nginx stop       # Stop the server
+sudo service nginx reload     # Reload configuration
+Navigate to the default HTML directory
+
+
+cd /usr/share/nginx/html/
+Edit the Nginx configuration file
+
+
+sudo nano /etc/nginx/nginx.conf
