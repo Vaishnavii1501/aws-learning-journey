@@ -1,0 +1,32 @@
+Linux Basics on EC2
+Today, I explored Linux basics by launching an EC2 instance and working with the terminal inside it. Here’s what I did:
+
+☁️ Launched EC2 Instance:
+Chose a free-tier t2.micro instance with a Linux-based AMI
+
+Added a security group rule:
+
+Type: SSH
+
+Port: 22
+
+Source: Anywhere (0.0.0.0/0)
+
+Downloaded the .pem key file for SSH access
+
+🔐 Connected via SSH:
+
+chmod 400 your-key.pem
+ssh -i your-key.pem ec2-user@<your-public-ip>
+🧑‍💻 Practiced Linux Commands:
+File navigation: ls, cd, pwd
+
+File management: mkdir, touch, rm, mv, cp
+
+User & permissions: whoami, sudo, chmod, chown
+
+File editing: nano, cat, echo
+
+Network & system info: ifconfig, top, df -h, uptime
+
+✅ Gained hands-on experience with the Linux CLI using a real cloud server.
