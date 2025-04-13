@@ -1,0 +1,60 @@
+LAMP Stack Setup on AWS EC2 (Amazon Linux 2)
+LAMP = Linux + Apache (httpd) + MySQL/MariaDB + PHP
+
+📌 Step-by-Step Setup
+🔧 1. Install Apache (httpd)
+
+sudo yum update -y
+sudo yum install httpd -y
+🚀 2. Start Apache
+
+sudo service httpd start
+sudo systemctl enable httpd   # To enable on boot
+sudo service httpd status     # Check if it's running
+🔥 Open port 80 in your EC2 Security Group for HTTP access
+
+🛠️ 3. Install MariaDB and PHP
+
+sudo yum install mariadb105-server php -y
+Optionally combine with Apache if not already installed:
+
+sudo yum install httpd mariadb105-server php -y
+🚦 4. Start Services
+
+sudo service mariadb start
+sudo service php-fpm start
+✅ 5. Check Service Status
+
+sudo service httpd status
+sudo service mariadb status
+sudo service php-fpm status
+🔁 Restart Services (if needed)
+
+sudo service httpd restart
+sudo service mariadb restart
+sudo service php-fpm restart
+🌐 6. Add Web Content
+Navigate to the default Apache directory:
+
+
+cd /var/www/html/
+Create a simple HTML test page:
+
+
+sudo nano index.html
+Sample content:
+
+
+<h1>LAMP Server Running on Apache!</h1>
+Create a PHP test page:
+
+sudo nano index.php
+Sample content:
+
+<?php
+phpinfo();
+?>
+✅ Test in Browser
+Visit: http://<your-ec2-public-ip>/index.html or /index.php
+
+You should see your HTML content or the PHP info page.
