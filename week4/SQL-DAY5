@@ -1,0 +1,35 @@
+-- SQL Practice: Primary Key and Foreign Key
+
+-- ---------------------------
+-- TABLE: departments
+-- ---------------------------
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(100) NOT NULL
+);
+
+-- Sample Departments
+INSERT INTO departments (dept_name) VALUES
+('IT'),
+('HR'),
+('Finance'),
+('Marketing');
+
+-- ---------------------------
+-- TABLE: employees
+-- ---------------------------
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
+);
+
+-- Sample Employees with Foreign Key reference
+INSERT INTO employees (name, email, dept_id) VALUES
+('Vaishnavi Sambare', 'vaishnavi@example.com', 1),
+('Harshada Deshmukh', 'harshada@example.com', 2),
+('Ishwari Kulkarni', 'ishwari@example.com', 3),
+('Snehal Patil', 'snehal@example.com', 4),
+('Rohan Pawar', 'rohan@example.com', 1);
