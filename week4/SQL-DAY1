@@ -1,0 +1,53 @@
+Introduction to SQL & AWS RDS Basics
+
+## 🎯 Objectives for the Day
+- Understand basic SQL syntax
+- Learn how relational databases work
+- Get introduced to Amazon RDS
+- Launch an RDS instance from the AWS Console
+
+---
+
+## 🧠 What I Learned
+
+### 📌 SQL Basics
+- `SELECT` – Retrieve data from a table
+- `WHERE` – Filter records
+- `ORDER BY` – Sort the results
+- `LIMIT` – Restrict the number of rows
+- `INSERT INTO` – Add new records
+- `UPDATE` – Modify existing data
+- `DELETE` – Remove data
+
+### 🧱 Relational Database Concepts
+- Tables, Rows, Columns
+- Primary Key & Foreign Key
+- Normalization (1NF, 2NF, 3NF basics)
+
+### ☁️ Amazon RDS Overview
+- Fully managed relational database service
+- Supports MySQL, PostgreSQL, SQL Server, Oracle, etc.
+- Key Features:
+  - Automated backups
+  - Multi-AZ deployments
+  - Read Replicas
+  - Performance monitoring
+
+## 🛠️ Hands-On
+
+### ✅ Tasks Completed:
+- [x] Launched a MySQL RDS instance from AWS Console
+- [x] Connected to the DB using MySQL Workbench / CLI
+- [x] Ran basic SQL queries:
+  ```sql
+  CREATE DATABASE aws_sql_week4;
+  USE aws_sql_week4;
+  
+  CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100)
+  );
+
+  INSERT INTO students VALUES (1, 'Vaishnavi', 'vaish@example.com');
+  SELECT * FROM students;
