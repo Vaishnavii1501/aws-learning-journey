@@ -1,40 +1,31 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = ""; // Update if your root has a password
-$database = "lemp_demo";
+$password = "";  // Your MySQL root password if set
+$dbname = "lemp_demo";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Receive data from form
-$name = $_POST['name'] ?? '';
-$email = $_POST['email'] ?? '';
-$city = $_POST['city'] ?? '';
-$phone = $_POST['phone'] ?? '';
+// Get form values
+$name = $_POST['name'];
+$email = $_POST['email'];
+$city = $_POST['city'];
+$phone = $_POST['phone'];
 
-// Simple validation
-if (empty($name) || empty($email)) {
-    echo "Name and Email are required fields!";
-    exit;
-}
+// Insert into database
+$sql = "INSERT INTO users (name, email, city, phone) VALUES ('$name', '$email', '$city', '$phone')";
 
-// Prepared statement to prevent SQL injection
-$stmt = $conn->prepare("INSERT INTO users (name, email, city, phone) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("ssss", $name, $email, $city, $phone);
-
-// Execute
-if ($stmt->execute()) {
-    echo "<h2>Thank you, $name! Your data has been submitted successfully.</h2>";
+if ($conn->query($sql) === TRUE) {
+    echo "Signup successful! Welcome, " . htmlspecialchars($name) . "!";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$stmt->close();
 $conn->close();
 ?>
