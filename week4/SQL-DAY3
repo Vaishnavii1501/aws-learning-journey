@@ -1,0 +1,43 @@
+Filtering Data – WHERE Clause
+
+-- Equality match
+SELECT * FROM users WHERE name = 'bunny';
+SELECT name FROM users WHERE city = 'mumbai';
+SELECT * FROM users WHERE city = 'pune';
+
+-- Comparison operators
+SELECT * FROM users WHERE age > 30;
+SELECT * FROM users WHERE age < 30 AND city = 'mumbai';
+SELECT * FROM users WHERE age >= 25 AND age <= 35;
+
+-- NULL checks
+SELECT * FROM users WHERE email IS NULL;
+SELECT * FROM users WHERE email IS NOT NULL;
+
+-- Not equal
+SELECT * FROM users WHERE city != 'mumbai';
+📊 Sorting Results – ORDER BY
+
+SELECT * FROM users ORDER BY id;
+SELECT * FROM users ORDER BY name;
+SELECT * FROM users ORDER BY id DESC;
+SELECT * FROM users ORDER BY name DESC;
+
+🎯 Limiting Output – LIMIT & OFFSET
+
+SELECT * FROM users LIMIT 3;
+SELECT * FROM users LIMIT 3 OFFSET 4;
+
+🔡 Pattern Matching – LIKE
+
+-- Starts with 'r'
+SELECT * FROM users WHERE name LIKE 'r%';
+
+-- Ends with 'i'
+SELECT * FROM users WHERE name LIKE '%i';
+
+-- Contains 'i'
+SELECT * FROM users WHERE name LIKE '%i%';
+
+-- Name with exactly 4 characters
+SELECT * FROM users WHERE name LIKE '____'
