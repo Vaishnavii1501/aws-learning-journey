@@ -1,21 +1,11 @@
-CREATE DATABASE lemp_demo;
-
--- 2. Use the database
 USE lemp_demo;
+SELECT * FROM users;
 
--- 3. Create a table for users
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    city VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 
--- 4. Insert live example data
-INSERT INTO users (name, email, city) VALUES 
-('Vaishnavi Sambari', 'vaishnavi@example.com', 'Pune'),
-('Harshada Patil', 'harshada@example.com', 'Mumbai'),
-('Ishwari Deshmukh', 'ishwari@example.com', 'Nashik'),
-('Ajinkya Joshi', 'ajinkya@example.com', 'Nagpur'),
-('Sanket Shinde', 'sanket@example.com', 'Aurangabad');
+This is how the data is visible in the sql
+    
++----+-------------------+-----------------------------+----------+-------------+---------------------+
+| id | name              | email                       | city     | phone       | created_at          |
++----+-------------------+-----------------------------+----------+-------------+---------------------+
+|  1 | Vaishnavi Sambari | vaishnavi@gmail.com         | Pune     | 9876543210  | 2025-04-13 17:14:36 |
+|  2 | Harshada Kulkarni | harshada.kulkarni@domain.com| Mumbai   | 9023456789  | 2025-04-13 17:16:22 |
