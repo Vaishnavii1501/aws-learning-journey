@@ -1,0 +1,14 @@
+MYSQL -BACKUP & RESTORE 
+
+#Creating a copy of your database to prevent data loss.
+mysqldump -u [username] -p [database_name] > backup.sql
+
+ #Re-importing your backup file to recover your data.
+mysql -u [username] -p [database_name] < backup.sql
+
+EXAMPLES :-
+
+mysqldump -u root -p facebook>facebook.sql ;
+->backup files in from sql to linux;
+mysqldump -u root -p snapchat<facebook.sql ;
+->restore files again snapchat is newly created empty db
