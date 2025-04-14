@@ -1,0 +1,34 @@
+QL Query Practice – SELECT
+
+## 🧠 Topics Practiced
+- Inserting data into tables
+- Selecting specific columns
+- Filtering with `WHERE`
+- Using `IS NULL` and `IS NOT NULL`
+- Comparison and logical operators
+- Aliasing with `AS`
+- Sorting results with `ORDER BY`
+- Limiting rows with `LIMIT` and `OFFSET`
+- Pattern matching using `LIKE`
+
+---
+
+## 🛠️ Sample Data Insertion
+
+-- Insert records into the `users` table
+INSERT INTO users VALUES (1, 'vaishnavi', 'shirdi', 'vaishnavi@2', '22');
+
+-- Insert using specific columns
+INSERT INTO users(name, id, age, city)
+VALUES ('vaishnavi', 2, 25, 'mumbai');
+
+##Select Queries
+
+SELECT * FROM users;
+
+SELECT id, name, city FROM users;
+SELECT name, city FROM users;
+
+-- Using column aliases
+SELECT city AS address FROM users;
+SELECT name AS username FROM users;
