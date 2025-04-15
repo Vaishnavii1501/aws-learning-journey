@@ -1,0 +1,16 @@
+After running the query inside MySQL:
+
+
+SELECT * FROM users;
+
+You get something like:
+
+
++----+--------------------+-------------------------+----------+
+| id | name               | email                   | password |
++----+--------------------+-------------------------+----------+
+| 1  | Vaishnavi Sambari  | vaishnavi@gmail.com     | 1234     |
+| 2  | Harshada Mane      | harshada@gmail.com      | test123  |
+| 3  | Ishwari Jadhav     | ishwari@domain.com      | ishw@456 |
+| 4  | Ajinkya Kulkarni   | ajinkya@live.com        | pass2024 |
++----+--------------------+-------------------------+----------+
