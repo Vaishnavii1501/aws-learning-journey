@@ -1,35 +1,35 @@
-📝 Description:
-This project demonstrates how to host a simple website using the LEMP stack (Linux, Nginx, MySQL, PHP) on AWS,
+# Project: Hosting LEMP Website with MySQL Data
+
+This project demonstrates how to host a simple website using the LEMP stack (Linux, NGINX, MySQL, PHP) on AWS EC2,
 and view live data entries from an HTML form into a MySQL database.
 
-# 1. Create script file
-nano lemp.sh
+---
 
-# 2. Go to Nginx web directory
-cd /usr/share/nginx/html/
-ls
+## 🌐 Tech Stack
+- **Linux (Amazon Linux 2)**
+- **NGINX**
+- **MySQL**
+- **PHP**
 
-# 3. Create signup HTML form
-sudo nano signup.html
+---
 
-# 4. Create PHP script to handle form submission
-sudo nano submit.php
+## 📁 Files
+- `signup.html` — HTML registration form
+- `submit.php` — Backend script to handle form submission
+- `lemp.sh` — Optional script file for automation
+- MySQL database setup commands
 
-# 5. Enter MySQL shell
-sudo mysql
-# or
-sudo mysql -u root -p
+---
 
-# 6. Copy the submit PHP file for backup
-sudo cp submit.php submit.txt
+## 📌 Steps
 
-# 7. Install PHP-MySQL support
-sudo yum install php8.3-mysqlnd.x86_64 -y
-
-# 8. Restart LEMP services
-sudo service nginx restart
-sudo service mariadb restart
-sudo service php-fpm restart
-
-
- 
+### 1. Install LEMP Stack
+```bash
+sudo yum update -y
+sudo amazon-linux-extras enable php8.2
+sudo yum clean metadata
+sudo yum install nginx mariadb105-server php php-mysqlnd -y
+sudo systemctl start nginx
+sudo systemctl start mariadb
+sudo systemctl start php-fpm
+sudo systemctl enable nginx mariadb php-fpm
