@@ -1,0 +1,48 @@
+🔹 What is Docker?
+Docker is an open-source platform for developing, shipping, and running applications in containers.
+
+A container is a lightweight, standalone, executable package of software that includes everything needed to run it: code, runtime, system tools, libraries, and settings.
+
+🔹 Why Docker?
+Consistency across environments (dev → staging → prod).
+
+Isolation of applications.
+
+Lightweight and fast compared to traditional virtual machines.
+
+🔹 Key Concepts
+Term	Description
+Image	A snapshot of a container. It is the blueprint used to create containers.
+Container	A running instance of an image.
+Dockerfile	A script used to build Docker images.
+Docker Hub	A cloud-based registry to share Docker images.
+Volume	Persistent storage for Docker containers.
+Port Mapping	Connecting container ports to host ports (e.g., -p 8080:80).
+
+🔹 Basic Docker Commands
+Command	Description
+docker --version	Check Docker version
+docker pull <image>	Download an image from Docker Hub
+docker images	List all local images
+docker run <image>	Run a container from an image
+docker ps	List running containers
+docker stop <container_id>	Stop a running container
+docker rm <container_id>	Remove a container
+docker rmi <image_id>	Remove an image
+
+🔹 Sample Command
+bash
+Copy
+Edit
+docker run -d -p 8080:80 nginx
+Runs the nginx image in detached mode (-d).
+
+Maps host port 8080 to container port 80.
+
+📝 Summary
+Docker simplifies deployment and eliminates "it works on my machine" issues.
+
+Containers are isolated and reproducible environments.
+
+Understanding images, containers, and commands is the first step.
+
